@@ -4,7 +4,7 @@ info:
   description: "Users API"
   version: "1.0.0"
   title: "Users"
-host: "localhost"
+host: "ec2-63-32-58-53.eu-west-1.compute.amazonaws.com"
 basePath: "/users"
 schemes:
 - "http"
