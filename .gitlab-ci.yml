@@ -1,0 +1,8 @@
+stages:
+  - deployed
+
+job1:
+  stage: deployed
+  script:
+    - cd ~/cloudappi
+    - git pull https://gitlab.com/marcorangel/cloudappi.git
