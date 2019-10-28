@@ -26,7 +26,7 @@ La instancia se autoescala al sobrepasar 10% del uso de la CPU. Para esto se gen
 
 
 ## Deployed
-Se configuro y personalizo una Ami con ubuntu 18, nodejs, npm, para luego ser utilizada como plantilla al Launch Configuration. El autoescalado inicialmente parte con una instancia t2.micro en la region de Irlanda. Auto scaling group esta configurado con un minimo 1 instacia y máximo 2, al sobrepasar el 10 % de uso del CPU lanza una segunda instancia y al decrementase elimina el auto scaling elimina la mas nueva conservando la original. Todas las metricas son visibles en CloudWatch. Para el código de esta infraestructura se utilizo [CloudFormation](https://gitlab.com/marcorangel/cloudappi/tree/master/cloudFormation)
+Se configuro y personalizo una Ami con ubuntu 18, nodejs, npm, para luego ser utilizada como plantilla al Launch Configuration. El autoescalado inicialmente parte con una instancia t2.micro en la region de Irlanda. Auto scaling group esta configurado con un minimo 1 instacia y máximo 2, al sobrepasar el 10 % de uso del CPU lanza una segunda instancia y al decrementase elimina la mas nueva conservando la original. Todas las metricas son visibles en CloudWatch. Para el código de esta infraestructura se utilizo [CloudFormation](https://gitlab.com/marcorangel/cloudappi/tree/master/cloudFormation)
 
 La api se pude observar en: http://rangelmarco.com
 
