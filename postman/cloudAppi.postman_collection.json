@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "17f3427c-667c-41cf-b2a9-e0bed4defbf5",
+		"name": "cloudAppi",
+		"description": "Code Challenge - DevOps - Marco Rangel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/getusers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://rangelmarco.com/users/getusers",
+					"protocol": "http",
+					"host": [
+						"rangelmarco",
+						"com"
+					],
+					"path": [
+						"users",
+						"getusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/createUsers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseurl}}/createUsers",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"createUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getusersById/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseurl}}/getusersById/1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"getusersById",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/updateUsersById/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseurl}}/updateUsersById/1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"updateUsersById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/deleteUsersById/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseurl}}/deleteUsersById/1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"deleteUsersById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "796b90d6-6e68-495b-984c-1f74935c37b7",
+			"key": "baseurl",
+			"value": "http://rangelmarco.com/users",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

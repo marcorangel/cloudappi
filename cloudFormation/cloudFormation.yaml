@@ -1,0 +1,44 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Resources:
+  lcTest:
+    Type: 'AWS::AutoScaling::LaunchConfiguration'
+    Properties: 
+      BlockDeviceMappings: 
+        - DeviceName: "/dev/sda1"
+          Ebs: 
+            DeleteOnTermination: true
+            VolumeSize: 8
+            VolumeType: gp2
+      ImageId: ami-0dca25ccb723754a5
+      InstanceType: t2.micro
+      KeyName: devOpsIrlanda
+      LaunchConfigurationName: testLc
+      SecurityGroups: 
+        - sg-070ac3b2a842bc9cd
+
+  asgTest:
+    Type: 'AWS::AutoScaling::AutoScalingGroup'
+    Properties: 
+      AutoScalingGroupName: testAsg
+      AvailabilityZones: 
+        - eu-west-1a
+        - eu-west-1b
+        - eu-west-1c
+      Cooldown: 60
+      DesiredCapacity: 1
+      HealthCheckGracePeriod: 10
+      LaunchConfigurationName: !Ref lcTest
+      MaxSize: 2
+      MinSize: 1
+      TerminationPolicies: 
+        - NewestInstance
+      VPCZoneIdentifier:
+        - subnet-0b1f1669 
+        - subnet-6792d821
+        - subnet-834a61f7
+
+
+
+
+    
