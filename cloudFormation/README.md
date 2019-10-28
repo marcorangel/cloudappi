@@ -1,2 +1,2 @@
-# Codigo Infraestructura AWS
+# Código Infraestructura AWS
 ## CloudFormation
